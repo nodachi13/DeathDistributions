@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="bson-3.4.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Mongo Dependencies/bson-3.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Mongo Dependencies/gson-2.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Mongo Dependencies/mongodb-driver-3.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Mongo Dependencies/mongodb-driver-core-3.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Mongo Dependencies/postgresql-42.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
