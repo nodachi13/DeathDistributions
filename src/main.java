@@ -80,6 +80,8 @@ public class main
                     double age = itr.next();
                     int temp = (int) (age * 10 + 0.5);
                     age = (double)temp / 10.0;
+                    if (age < 0)
+                        itr.remove();
                     if (age == precision)
                     {
                         count++;
