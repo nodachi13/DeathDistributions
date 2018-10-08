@@ -1,8 +1,5 @@
 import SQLClasses.SQLPerson;
-import com.google.gson.Gson;
 import databaseClasses.*;
-import dates.*;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -18,17 +15,16 @@ public class main
 {
     public static void main(String[] args)
     {
-        Gson gson = new Gson();
         ArrayList<SQLPerson> persons = new ArrayList<>();
 
         database dbase = new database();
         PreparedStatement personStmt = null;
-        int iterations = 0;
+        int iterations = 0, distSize = 25000;
 
         ArrayList<Double> ages = new ArrayList<>();
         try
         {
-            while (persons.size() < 10000)
+            while (persons.size() < distSize)
             {
                 iterations++;
                 String personSQL = "SELECT * FROM Person ORDER BY RANDOM() LIMIT 50000";
@@ -36,18 +32,21 @@ public class main
                 database.getPersons(personStmt, persons);
             }
 //            personStmt.executeBatch();
-            int count = 0;
-            for (int i = 0; i < persons.size(); i++)
-            {
-                if (persons.get(i).getFactsCount() >= 2)
-                    count++;
-                else
-                    System.out.println(persons.get(i).getPID());
-            }
+            int diff = persons.size() - distSize;
+            for (int i = 0; i < diff; i++)
+                persons.remove(i);
+//            int count = 0;
+//            for (int i = 0; i < persons.size(); i++)
+//            {
+//                if (persons.get(i).getFactsCount() >= 2)
+//                    count++;
+//                else
+//                    System.out.println(persons.get(i).getPID());
+//            }
 
             System.out.println("Iterations: " + iterations);
-            System.out.println("People with death dates: " + persons.size());
-            System.out.println("People with at least 2 facts: " + count);
+//            System.out.println("People with death dates: " + persons.size());
+//            System.out.println("People with at least 2 facts: " + count);
         }
         catch(SQLException e)
         {
@@ -62,9 +61,10 @@ public class main
             death = (person.getDeath().getLastDay() + person.getDeath().getFirstDay()) / 2;
 
             age = (death - birth) / 365;
+            if (age > 100)
+                System.out.println(person.getPID());
             ages.add(age);
         }
-        ArrayList<Integer> distributions = new ArrayList<>();
         double precision = 0.0;
 
         try {
@@ -81,7 +81,7 @@ public class main
                     int temp = (int) (age * 10 + 0.5);
                     age = (double)temp / 10.0;
                     if (age < 0)
-                        itr.remove();
+                        age = 0.0;
                     if (age == precision)
                     {
                         count++;
@@ -89,18 +89,13 @@ public class main
                     }
                 }
 
-//                for (double age : ages)
-//                {
-//                    if (round(age, 1) == precision)
-//                    {
-//                        count++;
-//                        ages.remove(age);
-//                    }
-//                }
-
                 if (count > 0)
-                    wr.write(precision + "," + count + "," + round(count/persons.size(), 2) + "%\n");
+                {
+                    double percentage = (double)count / persons.size();
+                    percentage = round(percentage, 4);
+                    wr.write(precision + "," + count + "," + percentage + "%\n");
 
+                }
                 int temp = (int) (precision * 10 + 0.5);
                 precision = (double)(temp + 1)/10.0;
             }
@@ -119,10 +114,5 @@ public class main
         BigDecimal bd = new BigDecimal(Double.toString(value));
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
-    }
-
-    public static int calculateAge(DateRange birth, DateRange death)
-    {
-        return 0;
     }
 }
