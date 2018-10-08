@@ -61,14 +61,14 @@ public class main
             death = (person.getDeath().getLastDay() + person.getDeath().getFirstDay()) / 2;
 
             age = (death - birth) / 365;
-            if (age > 100)
-                System.out.println(person.getPID());
+//            if (age > 100)
+//                System.out.println(person.getPID());
             ages.add(age);
         }
         double precision = 0.0;
 
         try {
-            Writer wr = new FileWriter("ageDistributions.txt");
+            Writer wr = new FileWriter("ageDistributions.csv");
             wr.write("YEARS,COUNT,PERCENTAGE\n");
 
             while (ages.size() > 0)
