@@ -61,7 +61,9 @@ public class main
             death = (person.getDeath().getLastDay() + person.getDeath().getFirstDay()) / 2;
 
             age = (death - birth) / 365;
-//            if (age > 100)
+//            if (age > 1000)
+//                System.out.println(person.getPID());
+//            if (person.getRelationCount() > 2)
 //                System.out.println(person.getPID());
             ages.add(age);
         }

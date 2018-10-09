@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2180e542-2e18-4c2b-b584-6c46deedb3aa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ageDistributions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ageDistributions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ageDistributions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ageDistributions.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeathDistributions/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeathDistributions/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
@@ -20,8 +20,8 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1499">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="377">
+              <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,11 +29,9 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ageDistributions.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ageDistributions.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-31775" />
-          </provider>
+      <file leaf-file-name="ageDistributions.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ageDistributions.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="SQLPerson.java" pinned="false" current-in-tab="false">
@@ -133,8 +131,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4714" />
-    <option name="y" value="112" />
+    <option name="x" value="5271" />
+    <option name="y" value="152" />
     <option name="width" value="2399" />
     <option name="height" value="2006" />
   </component>
@@ -273,15 +271,15 @@
       <workItem from="1538497957711" duration="8928000" />
       <workItem from="1538672046499" duration="7260000" />
       <workItem from="1538761019440" duration="495000" />
-      <workItem from="1539022898485" duration="2056000" />
+      <workItem from="1539022898485" duration="6391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30069000" />
+    <option name="totallyTimeSpent" value="34404000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4714" y="112" width="2399" height="2006" extended-state="0" />
+    <frame x="5271" y="405" width="2399" height="2006" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -305,7 +303,7 @@
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.3995498" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.3995498" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
@@ -355,25 +353,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main.java</url>
-          <line>106</line>
+          <line>108</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="21" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SQLClasses/SQLPerson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
@@ -562,6 +562,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ageDistributions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31775" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ageDistributions.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SQLClasses/SQLPerson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1595">
@@ -572,15 +580,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ageDistributions.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31775" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1499">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="377">
+          <caret line="55" column="40" lean-forward="true" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
