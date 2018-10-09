@@ -93,7 +93,7 @@ public class main
 
                 if (count > 0)
                 {
-                    double percentage = (double)count / persons.size();
+                    double percentage = (double)count / persons.size() * 100;
                     percentage = round(percentage, 4);
                     wr.write(precision + "," + count + "," + percentage + "%\n");
 
